@@ -3,7 +3,7 @@
 from scapy.all import * 
 
 a = IP()
-a.dst = '155.210.71.69'
+a.dst = '155.210.71.165'
 a.src = '155.210.71.1'
 
 b = ICMP()
