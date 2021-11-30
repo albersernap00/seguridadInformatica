@@ -5,15 +5,14 @@ from scapy.all import *
 print('Introduce id del paquete ICMP:')
 idICMP = input()
 
-a = IP()
-a.dst = '155.210.71.184' #C
-a.src = '155.210.71.165' #A
+while(True):
+    a = IP()
+    a.dst = '155.210.71.184' #C
+    a.src = '155.210.71.165' #A
 
-b = ICMP()
-b.id = idICMP
+    b = ICMP()
+    b.id = int(idICMP, 16)
 
-ls(b)
+    p = a/b
 
-p = a/b
-
-send(p)
+    send(p)
