@@ -7,11 +7,13 @@ idICMP = input()
 
 while(True):
     a = IP()
-    a.dst = '155.210.71.184' #C
+    a.dst = '155.210.71.84' #C
     a.src = '155.210.71.165' #A
 
     b = ICMP()
     b.id = int(idICMP, 16)
+    b.type = "echo-reply"
+    b.code = 0
 
     p = a/b
 
